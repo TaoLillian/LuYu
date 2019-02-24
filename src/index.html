@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../lib/vue-2.4.0.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://unpkg.com/mint-ui/lib/style.css">
+    <script src="https://unpkg.com/mint-ui/lib/index.js"></script>
+    <style>
+        body {background-image:url("imgs/2.jpg");}
+    </style>
+</head>
+<body>
+
+<embed src="music/1.mp3" hidden="true" autostart="true" loop="true">
+
+<div id="app" class="canvas">
+    <div><img src="imgs/1.jpg"></div>
+    <h1 class=""> 1.你为什么不回我消息#!_#!宝宝生气了，你是选择哪一个</h1>
+    <div class="position1" @click="wrong"> <h2>A.哄你个鬼(要是你敢选你死定了)</h2></div>
+
+    <div :class="'position'+ index">
+
+        <h6 style="color: lightblue;background-color: papayawhip;" v-if="isShow">哼，我才不要这么快原谅你呢</h6>
+        <h6 style="color: lightblue;background-color: papayawhip;" v-else="isShow">算了，你点吧</h6>
+
+        <div  class="Bback" @mouseover="mubiao" @click="right">
+            <h2>B.乖乖，哄你啦！(这才是正确答案)</h2>
+        </div>
+    </div>
+    <!--<div class="position2" > <h2>B.乖乖，哄你啦！(这才是正确答案)</h2></div>-->
+
+</div>
+
+
+
+</body>
+</html>
+<script>
+
+    var vm = new Vue({
+        el:'#app',
+        data:{
+            index:1,
+            count:0,
+            isShow:false,
+        },
+        methods:{
+            mubiao(){
+
+                this.count++;
+                if(this.count > 10){
+                    this.isShow = false;
+                }
+                else {
+                    this.isShow = true ;
+                    this.index = Math.floor(Math.random() * 4);
+
+                }
+            },
+            right(){
+                // Toast('');
+                 alert('那我就原谅你了');
+            },
+            wrong(){
+                // Toast('vds');
+                 alert('你死定了，等着！');
+            }
+        }
+    })
+</script>

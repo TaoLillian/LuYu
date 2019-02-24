@@ -1,0 +1,59 @@
+
+
+.canvas{
+    background-color: #f2dede;
+    width: 600px;
+    height: 500px;
+    margin: 120px 300px;
+}
+img {
+    width:50px ;
+    height: 60px;
+    padding-left: 275px;
+}
+.position1{
+    background-color: purple;
+    width: 400px;
+    height: 40px;
+    /*margin-left: 90px;*/
+    /*margin-top: 200px;*/
+}
+.position2{
+    background-color: purple;
+    width: 400px;
+    height: 40px;
+    margin-right: 300px;
+    margin-top: 230px;
+}
+.position3{
+    background-color: purple;
+    width: 400px;
+    height: 40px;
+    margin-left: 222px;
+    margin-top:90px ;
+}
+.position4{
+    background-color: purple;
+    width: 400px;
+    height: 40px;
+    margin-left: 400px;
+    margin-top: 300px;
+}
+.position0{
+    background-color: purple;
+    width: 400px;
+    height: 40px;
+    margin-left: 390px;
+    margin-bottom: 100px;
+}
+.Bback {
+    background-color: purple;
+    width: 400px;
+    height: 40px;
+}
+.Bback1 {
+    background-color: #d0e9c6;
+    width: 400px;
+    height: 40px;
+}
+
